@@ -1,8 +1,17 @@
-public class Calculator{
-	ptivate int result
+package ru.lesson.lessons;
+class Calculator{
+	private int result;
 	public void add(int ... params){
 		for(Integer param : params){
 			this.result+=param;
+		}
+	}
+
+	public void div(int ... args){
+		if(args.length > 0){
+
+		} else {
+
 		}
 	}
 

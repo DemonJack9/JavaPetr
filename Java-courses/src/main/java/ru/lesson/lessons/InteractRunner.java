@@ -1,3 +1,4 @@
+package ru.lesson.lessons;
 import java.util.Scanner;
 public class InteractRunner{
 	public static void main(String[] args){
@@ -5,9 +6,9 @@ public class InteractRunner{
 		try{
 			Calculator calc = new Calculator();
 			String exit = "no";
-			while(!exit.equals == "yes"){
+			while(exit == "no"){
 				System.out.println("Enter first arg :");
-				Stirng first = in.next();
+				String first = in.next();
 				System.out.println("Enter second arg :");
 				String second = in.next();
 				calc.add(Integer.valueOf(first), Integer.valueOf(second));

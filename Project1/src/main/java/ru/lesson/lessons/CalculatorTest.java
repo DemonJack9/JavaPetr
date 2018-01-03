@@ -1,0 +1,32 @@
+package ru.lesson.lessons;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CalculatorTest extends Calculator {
+    @Test
+    public void testAdd() throws Exception {
+        Calculator calculator = new Calculator();
+        calculator.add(1, 1);
+        assertEquals(2, calculator.getResult());
+    }
+
+    @Test(expected = UserException.class)
+    public void divExceprion() throws UserException {
+        Calculator calculator = new Calculator();
+        calculator.div();
+    }
+
+    @Test()
+    public void div() throws UserException {
+        Calculator calculator = new Calculator();
+        calculator.div(1, 1);
+        assertEquals(1, calculator.getResult());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void divRuntimeException() throws UserException {
+        Calculator calculator = new Calculator();
+        calculator.div(1, 0);
+    }
+}
